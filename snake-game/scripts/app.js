@@ -1,4 +1,4 @@
-import { drawBoard, drawSnake, drawFood } from "/scripts/ui.js";
+import { drawBoard, drawSnake, drawFood } from "scripts/ui.js";
 
 let lastTime = 0;
 const updateInterval = 200; // Update alle 200ms (5 Bewegungen pro Sekunde)
