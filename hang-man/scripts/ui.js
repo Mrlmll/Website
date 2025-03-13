@@ -33,7 +33,7 @@ export function updateImg(attempts, letter, word, guessedChar){
     } else {
         attempts--;
         attemptsNumberEl.innerText = attempts;
-        imgEl.setAttribute("src", `./images/hangman-${attempts}.png`)
+        imgEl.setAttribute("src", `./images/hangman-${attempts > 0 ? attempts : 0}.png`)
         return attempts;
     }
 };
