@@ -1,0 +1,114 @@
+html {
+  height: 100%;
+}
+:root {
+  --font-scale: 1.333;
+  --p: 1rem;
+  --h5: calc(var(--p) * var(--font-scale));
+  --h4: calc(var(--h5) * var(--font-scale));
+  --h3: calc(var(--h4) * var(--font-scale));
+  --h2: calc(var(--h3) * var(--font-scale));
+  --h1: calc(var(--h2) * var(--font-scale));
+  --small: calc(var(--p) / var(--font-scale));
+
+
+  --text: rgb(215, 255, 222); 
+  --background: rgb(0, 18, 2);
+  --secondary: rgb(77, 163, 217);
+  --primary: rgb(30, 118, 140);
+  --accent: rgb(124, 249, 144);
+
+  
+  font-family: 'General Sans', sans-serif;
+}
+body {
+  margin: 0;
+  background-color: var(--background);
+  min-height: 100%;
+}
+
+
+.marlin-container {
+  display: flex;
+  align-items: end;
+}
+.svg-1 {
+  fill: var(--text);
+  transition: fill 0.2s;
+}
+.svg-1:hover {
+  fill: var(--accent);
+}
+.svg-test {
+  height: 150px;
+  margin: 0px 6px;
+}
+.svg-test-l {
+  margin: 0px 6px;
+  width: 39.84px;
+}
+
+
+#menu {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+#menu-items {
+  margin-left: 6rem;
+  position: relative;
+  z-index: 2;
+}
+
+#menu-items:hover > .menu-item {
+  opacity: 0.3;
+}
+
+#menu-items:hover > .menu-item:hover {
+  opacity: 1;
+}
+
+.menu-item {
+  color: var(--text);
+  font-size: var(--h1);
+  display: block;
+  text-decoration: none;
+  padding: 0.5rem;
+  transition: opacity 400ms ease;
+}
+
+#menu-background-pattern {
+  height: 100vh;
+  width: 100%;
+  background-image: radial-gradient(
+    rgba(2255, 255, 255, 0.1) 9%,
+    transparent 9%
+  );
+  background-position: 0% 0%;
+  background-size: 12vmin 12vmin;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: 1;
+
+  transition: opacity 800ms ease,
+    background-size 800ms ease;
+}
+#menu-items:hover ~ #menu-background-pattern {
+  background-size: 11vmin 11vmin;
+  opacity: 0.5;
+}
+
+#menu[data-active-index="0"] > #menu-background-pattern {
+  background-position: 0% -33.3%;
+}
+
+#menu[data-active-index="1"] > #menu-background-pattern {
+  background-position: 0% -66.6%;
+}
+
+#menu[data-active-index="2"] > #menu-background-pattern {
+  background-position: 0% -100%;
+}
+
