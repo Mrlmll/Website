@@ -36,6 +36,11 @@ document.addEventListener("keydown", () => {
     }
 });
 
+document.getElementById("reset-button").addEventListener("click", () => {
+    location.reload();
+})
+
+
 
 function renderGame(snake, food){
     drawBoard();
@@ -155,6 +160,7 @@ function endGame(){
     console.log("lost");
     cancelAnimationFrame(animationId);
     stopTimer()
+    document.getElementById("reset").setAttribute("class", "reset-on")
 }
 
 
