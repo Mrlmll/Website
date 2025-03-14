@@ -1,0 +1,58 @@
+
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+}
+.quiz-con {
+  width: 90%;
+  max-width: 400px;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.btn {
+  padding: 10px 20px;
+  margin-bottom: 3px;
+  border: solid 2px black;
+  background-color: rgb(147, 232, 255);
+  color: black;
+  cursor: pointer;
+  font-size: 16px;
+}
+.btn:hover {
+  background: rgb(107, 190, 213);
+}
+.bingo-grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);  /* 20 Spalten */
+  grid-template-rows: repeat(4, 1fr);     /* 20 Zeilen */
+  width: 100%;               /* Größe des Spielfelds (anpassbar) */
+  height: 400px;
+  border: 1px solid black;
+}
+.bingo-grid div{
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid black;
+  text-wrap: wrap;
+  font-size: 12px;
+  font-weight: bold;
+}
+.bingo-marked{
+  background-color: rgb(255, 158, 158);
+}
+.question-con{
+  margin-bottom: 20px;
+}
