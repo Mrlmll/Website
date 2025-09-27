@@ -71,6 +71,15 @@ const questions = [
       { text: "Grafikdesign", correct: false },
     ] 
   },
+  {
+    question: "Bla Bla Bla",
+    bingoName: "Bla Bla",
+    answers: [
+      { text: "Bla", correct: true },
+      { text: "Blaa", correct: false },
+      { text: "Blaaa", correct: false },
+    ] 
+  },
 ];
 
 const quizContainer = document.getElementById("question-con");
